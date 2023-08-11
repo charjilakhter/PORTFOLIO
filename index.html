@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHARJIL AKHTER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#portfolio">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+
+                <h1><span>Hi, I am Charjil Akhter</span></h1>
+                <p><span>B-Tech in Mechanical Engineering</span></p>
+                <p><span>Bineswar Brahma Engineering College 2020-2024</span></p>
+                <p></p>
+                <!-- <a>BBEC</a> -->
+
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img.akh.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Currently, I am a fourth year student pursuing B-Tech at BBEC and
+                        mechanical Engineering. </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>CSS</span><br></li>
+                            <li><span>HTML</span><br></li>
+                            <li><span>Python</span><br></li>
+                            <li><span>javascript</span><br></li>
+                            <li><span>React</span><br></li>
+                            <li><span>MS Office Specialist</span><br>MS Word, MS Excel, MS PowerPoint</li>
+
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>June 2021 - July 2021</span><br>Internship at SNEHALAYA</li>
+                            <li><span>June 2022 - July 2022</span><br>Internship at TRTC AMINGAON</li>
+                            <li><span>June 2023 - JULY2023</span><br>Internship at IOCL Noonmati,Assam</li>
+                            <li><span>June 2023 - JULY2023</span><br>Internship currently at Codsoft</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - Current</span><br>BTech in Mechanical, Bineswar Brahma Engineering College
+                                <br>SGPA - 6.54 (6th Semester)</br>
+                            </li>
+                            <li><span>2007 - 2018</span><br> Gateway Academy Junior College<br>Grade - 65%</br></li>
+                            <li><span>2018 - 2020</span><br>Dumunichowki English School<br>Grade - 75%</br></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-sharp fa-solid fa-envelope"></i>charjilakhter62525@gmail.com</p>
+                        <p><i class="fa-sharp fa-solid fa-phone"></i>+91 7896871450</p>
+                        <div class="social-icons">
+                            <a
+                                href="https://www.facebook.com/people/charjil akhter/pfbid0qSbvYvDMs5qFnBvjtGamKVhNzg5xp3ZEYsWpQ3jKySwuCTRihJrmsvNhpFerezsXl/?mibextid=ZbWKwL"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="https://github.com/charjilavkhter"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.instagram.com/_samarjitroy_/"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/charjilakhter-368071557/"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <div class="contact-right">
+                                <form name="submit-to-google-sheet">
+                                    <input type="text" name="Name" placeholder="Your Name" required>
+                                    <input type="email" name="Email" placeholder="Your Email" required>
+                                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                    <button type="submit" class="btn btn2">Submit</button>
+                                </form>
+                                <span id="msg"></span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <p> © All rights reserved | Terms of Service | Privacy Policy</p>
+                    </div>
+                </div>
+                <script>
+                    var tablinks = document.getElementsByClassName("tab-links");
+                    var tabcontents = document.getElementsByClassName("tab-contents");
+
+                    function opentab(tabname) {
+                        for (tablink of tablinks) {
+                            tablink.classList.remove("active-link");
+                        }
+                        for (tabcontent of tabcontents) {
+                            tabcontent.classList.remove("active-tab");
+                        }
+                        event.currentTarget.classList.add("active-link");
+                        document.getElementById(tabname).classList.add("active-tab");
+                    }
+
+                </script>
+                <script>
+                    var sidemenu = document.getElementById("sidemenu");
+                    function openmenu() {
+                        sidemenu.style.right = "0";
+                    }
+                    function closemenu() {
+                        sidemenu.style.right = "-200px";
+                    }
+                </script>
+                <script>
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbwlLDR8Pq-3pBIYCbXs4IgTbUYzJDmDBj_4EwoR88kdQEJmgCby9npHDFDiuALzF3gD-A/exec'
+                    const form = document.forms['submit-to-google-sheet']
+                    const msg = document.getElementById("msg")
+                    form.addEventListener('submit', e => {
+                        e.preventDefault()
+                        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                            .then(response => {
+                                msg.innerHTML = "Message sent succesfully"
+                                setTimeout(function () {
+                                    msg.innerHTML = ""
+                                }, 3000)
+                                form.reset()
+                            })
+                            .catch(error => console.error('Error!', error.message))
+                    })
+                </script>
+</body>
+
+</html>
